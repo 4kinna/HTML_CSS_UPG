@@ -13,48 +13,53 @@
     <section>Vi på Kakfabriken har bestämmt att i år ha vårat undersökningsformullär för samtliga avdelningars anställda
         via denna webbsida. </section>
     <br>
+    <!-- lable och id har samma namn och är det som hjälper backend att lagra infon -->
+    <form>
+        <label for="namn"><strong>Ange fullständigt namn</strong></label>
+        <input type="text" name="namn" id="namn" size="35" maxlength="20">
+
+        <br><br>
+
+        <label for="om">Vänligen skriv lite om dig själv:</label><br>
+        <textarea id="om" style=" background-color: palevioletred;" rows="4" cols="30">
+       </textarea>
+
+        <br><br>
+        <!-- glöm inte value annars lagrars inte de svaret användaren anget -->
+        <p><em>Utför du någon form av fysisk aktivitet i vardagen? </em></p>
+        <input type="radio" name="sport" id="sportja" value="ja">
+        <label for="sportja">JA</label>
+        <input type="radio" name="sport" id="sortnej" value="nej">
+        <label>Nej</label>
+        <br> <br>
 
 
-    <label><strong>Ange fullständigt namn</strong></label>
-    <input type="text" size="35" maxlength="20">
-    <br><br>
+        <p><strong><em>På vilket sätt tar du helst in intressant information?</em></strong></p>
 
-    <label>Vänligen skriv lite om dig själv</label>
-    <textarea style="resize: none; background-color: palevioletred;" rows="4" cols="30">
-       </textarea><br><br>
+        <input type="checkbox" namn="read" value="books" id="read-books">
+        <label for="read-books"> Böcker</label><br>
 
+        <input type="checkbox" namn="read" value="papper" id="read-newspapper">
+        <label for="read-newspapper"> Tidningar</label><br>
 
+        <input type="checkbox" namn="read" value="online" id="read-online">
+        <label for="read-online"> Online</label><br>
+        <br><br>
 
-    <label><em>Utför du någon form av fysisk aktivitet i vardagen? </em></label>
-    <input input type="radio" name="sport">
-    <label>JA</label>
-    <input input type="radio" name="sport">
-    <label>Nej</label>
-    <br> <br>
+        <label for="movie-genre">Vilken är din favorit film genre</label>
+        <select name="movie" id="movie-genre">
+            <option selected disabled hidden style="display: none" value="empty"></option>
+            <option value="Action">Action</option>
+            <option value="Romantik">Romantik</option>
+            <option value="Komedi">Komedi</option>
+            <option value="Drama">Drama</option>
+            <option value="Skräck">Skräck</option>
+        </select><br><br>
 
-
-    <label><strong><em>På vilket sätt tar du helst in intressant information?</em></strong></label><br>
-    <input type="checkbox">
-    <label> Böcker</label><br>
-    <input type="checkbox">
-    <label> Tidningar</label><br>
-    <input type="checkbox">
-    <label> Online</label><br>
-    <br>
-
-    <label for="cars">Vilken är din favorit film genre</label>
-    <select name="film">
-        <option></option>
-        <option value="Action">Action</option>
-        <option value="Romantik">Romantik</option>
-        <option value="Komedi">Komedi</option>
-        <option value="Drama">Drama</option>
-        <option value="Skräck">Skräck</option>
-    </select>
-
-    <p> Genom att trycka ENTER nedan så godkänner du och skickar in formulläret du fyllt i</p>
-    <input type="submit" value="Enter">
-
+        <lable for="resultat"> Genom att trycka ENTER nedan så godkänner du och skickar in formulläret du fyllt i
+        </lable><br>
+        <input type="submit" value="Enter" id="reslutat" name="enter">
+    </form>
 
 </body>
 
