@@ -1,0 +1,168 @@
+#css-zen-garden {
+  /* background-image: url(https://cdn.pixabay.com/photo/2019/03/05/01/59/spring-background-4035402_960_720.jpg); */
+  background-image: url(https://cdn.pixabay.com/photo/2017/04/15/12/02/petals-2232267_1280.jpg);
+
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(41, 39, 39);
+}
+.page-wrapper {
+  margin-right: auto;
+  margin-left: auto;
+
+  max-width: 960px;
+
+  padding-right: 10px;
+  padding-left: 10px;
+
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: rgba(245, 245, 220, 0.671);
+}
+
+/* grid area row-start/col-star/row-end/col-end */
+#zen-intro {
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+#zen-intro h1 {
+  text-decoration: underline;
+  font-size: 30px;
+  margin-bottom: 0px;
+}
+
+#zen-intro h2 {
+  font-size: 20px;
+  font-style: italic;
+  color: rgb(37, 37, 37);
+  margin-top: 1px;
+}
+#zen-intro h3 {
+  font-size: 20px;
+  text-decoration: underline;
+  color: rgb(37, 37, 37);
+  margin-bottom: 1px;
+}
+
+.intro > header {
+  grid-row: 1;
+  grid-column: 1 / end;
+
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+#zen-summary {
+  grid-row: 2;
+  grid-column: 1/2;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  background-color: rgba(255, 105, 180, 0.089);
+  border-radius: 50%;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 60px;
+  color: rgb(61, 60, 60);
+}
+
+#zen-preamble {
+  grid-row: 2;
+  grid-column: 2 / end;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+#zen-supporting {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+
+  padding: 15px;
+}
+
+#zen-explanation {
+  flex: 0 32%;
+}
+
+#zen-participation {
+  flex: 0 42%;
+}
+#zen-benefits {
+  flex: 0 20%;
+}
+
+#zen-requirements {
+  flex: 0 100%;
+}
+footer {
+  flex: 0 100%;
+  text-decoration: underline;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.wrapper {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  text-align: center;
+}
+
+.wrapper > div {
+  /* background-color: rgba(255, 105, 180, 0.329); */
+  margin: 30px;
+  padding: 30px;
+  background-color: rgba(255, 105, 180, 0.089);
+  box-shadow: 0 2px 10px 0 rgba(255, 105, 180, 0.062),
+    0 4px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.wrapper > a {
+  text-decoration-style: none;
+}
+.wrapper > h3 {
+  padding: 0%;
+  text-decoration: none;
+}
+a:link {
+  color: hotpink;
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(55, 136, 228);
+}
+a:visited {
+  background-color: rgb(8, 8, 8);
+}
+
+ul {
+  list-style: none;
+  padding: 0%;
+}
+
+@media (max-width: 700px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  #zen-supporting {
+    flex-direction: column;
+  }
+  #zen-intro {
+    display: block;
+  }
+  #zen-summary {
+    background-color: rgba(255, 105, 180, 0.089);
+
+    border-radius: 0%;
+    padding: 0%;
+    box-shadow: 0 2px 10px 0 rgba(255, 105, 180, 0.062),
+      0 4px 10px 0 rgba(0, 0, 0, 0.19);
+  }
+}
